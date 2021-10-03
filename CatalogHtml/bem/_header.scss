@@ -1,0 +1,32 @@
+@import "style";
+
+.header {
+    padding-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 375px) {
+        padding: 0 13px;
+    }
+    &__title {
+        color: $textColorMain;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 35px;
+        letter-spacing: 0.3px;
+    }
+
+    &__sort {
+        @include whiteWrap;
+        @include fontTextSmall;
+        color: $textColorHidden;
+        text-decoration: none;
+        box-sizing: border-box;
+        padding: 10px 16px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        &::after {
+            content: url(images/show.svg);
+            margin-left: 5px;
+        }
+    }
+}

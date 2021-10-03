@@ -1,0 +1,15 @@
+.cardBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 16px 16px;
+    @media (max-width: 375px) {
+        grid-template-columns: 1fr;
+    }
+    &_margin {
+        margin: 16px 0 0 16px;
+        @media (max-width: 375px) {
+            margin: 16px auto;
+        }
+    }
+}

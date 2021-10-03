@@ -1,0 +1,57 @@
+@import "bem/cardBox";
+@import "bem/card";
+@import "bem/form";
+@import "bem/header";
+$bgrColor: #e5e5e5;
+$textColorMain: hsla(0, 0%, 25%, 1);
+$textColorHidden: hsla(0, 0%, 71%, 1);
+$colorInputText: hsla(241, 13%, 32%, 1);
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+@mixin whiteWrap {
+    background: #fffefb;
+    border-radius: 4px;
+}
+@mixin formStyle {
+    outline: none;
+    border: none;
+    border: solid 1px rgba(255, 254, 251, 1);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+@mixin fontTextSmall {
+    font-size: 12px;
+    line-height: 15px;
+}
+* {
+    font-family: "Source Sans Pro", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    width: 100%;
+    height: 100%;
+    background: $bgrColor;
+}
+.container {
+    max-width: 1376px;
+    margin: 0 auto;
+}
+
+.content {
+    display: flex;
+    @media (max-width: 375px) {
+        display: block;
+    }
+}
